@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StepUpTextFieldDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You can use this textfield to increment or decrement some value " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceL-zr-6lI">
+                                <rect key="frame" x="16" y="60" width="343" height="46.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 1 count" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZF-At-Jg5">
+                                <rect key="frame" x="16" y="166.5" width="261" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vst-bu-dlp" userLabel="Step Up Text Field 1" customClass="StepUpTextField" customModule="StepUpTextFieldDemo" customModuleProvider="target">
+                                <rect key="frame" x="294" y="167" width="65" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="RoF-K0-2QH"/>
+                                    <constraint firstAttribute="width" constant="65" id="qlS-X8-sI0"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <integer key="value" value="11"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxDigits">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepSize">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="RH7-rZ-4Vk"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 2 count" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0Z-L6-Hsz">
+                                <rect key="frame" x="16" y="211.5" width="261" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q6a-jP-PUc" userLabel="Step Up Text Field 2" customClass="StepUpTextField" customModule="StepUpTextFieldDemo" customModuleProvider="target">
+                                <rect key="frame" x="294" y="212" width="65" height="25"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxDigits">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepSize">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="45Q-2h-jEi"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item 3 count" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYn-5z-PT9">
+                                <rect key="frame" x="16" y="256.5" width="261" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GCk-rI-Yjb" userLabel="Step Up Text Field 3" customClass="StepUpTextField" customModule="StepUpTextFieldDemo" customModuleProvider="target">
+                                <rect key="frame" x="294" y="257" width="65" height="25"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxDigits">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="stepSize">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="sqv-CU-E2k"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KYn-5z-PT9" firstAttribute="leading" secondItem="i0Z-L6-Hsz" secondAttribute="leading" id="0Yo-9h-Ukz"/>
+                            <constraint firstItem="Q6a-jP-PUc" firstAttribute="width" secondItem="Vst-bu-dlp" secondAttribute="width" id="0pi-Lj-JS2"/>
+                            <constraint firstItem="Q6a-jP-PUc" firstAttribute="top" secondItem="Vst-bu-dlp" secondAttribute="bottom" constant="20" id="1dr-wF-mnI"/>
+                            <constraint firstItem="i0Z-L6-Hsz" firstAttribute="trailing" secondItem="IZF-At-Jg5" secondAttribute="trailing" id="27X-Et-F4a"/>
+                            <constraint firstItem="GCk-rI-Yjb" firstAttribute="leading" secondItem="Q6a-jP-PUc" secondAttribute="leading" id="3Me-k8-M6n"/>
+                            <constraint firstItem="ceL-zr-6lI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="58D-Ce-dgS"/>
+                            <constraint firstItem="Vst-bu-dlp" firstAttribute="leading" secondItem="IZF-At-Jg5" secondAttribute="trailing" constant="17" id="7ro-lB-0ET"/>
+                            <constraint firstItem="i0Z-L6-Hsz" firstAttribute="leading" secondItem="IZF-At-Jg5" secondAttribute="leading" id="83L-bH-U9O"/>
+                            <constraint firstItem="IZF-At-Jg5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="CZ8-0r-3o3"/>
+                            <constraint firstItem="KYn-5z-PT9" firstAttribute="trailing" secondItem="i0Z-L6-Hsz" secondAttribute="trailing" id="EEA-0v-RrB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vst-bu-dlp" secondAttribute="trailing" constant="16" id="Gqc-M9-vzf"/>
+                            <constraint firstItem="Vst-bu-dlp" firstAttribute="top" secondItem="ceL-zr-6lI" secondAttribute="bottom" constant="60" id="H6h-PT-wtL"/>
+                            <constraint firstItem="GCk-rI-Yjb" firstAttribute="height" secondItem="Q6a-jP-PUc" secondAttribute="height" id="Iql-wY-MWA"/>
+                            <constraint firstItem="i0Z-L6-Hsz" firstAttribute="top" secondItem="IZF-At-Jg5" secondAttribute="bottom" constant="20" id="L6b-QS-EVS"/>
+                            <constraint firstItem="GCk-rI-Yjb" firstAttribute="trailing" secondItem="Q6a-jP-PUc" secondAttribute="trailing" id="OuT-Ug-2MP"/>
+                            <constraint firstItem="GCk-rI-Yjb" firstAttribute="top" secondItem="Q6a-jP-PUc" secondAttribute="bottom" constant="20" id="TTj-pn-dSN"/>
+                            <constraint firstItem="ceL-zr-6lI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="UZi-RU-30O"/>
+                            <constraint firstItem="KYn-5z-PT9" firstAttribute="top" secondItem="i0Z-L6-Hsz" secondAttribute="bottom" constant="20" id="Xug-H9-knD"/>
+                            <constraint firstItem="KYn-5z-PT9" firstAttribute="height" secondItem="i0Z-L6-Hsz" secondAttribute="height" id="aIs-96-2tu"/>
+                            <constraint firstItem="Q6a-jP-PUc" firstAttribute="trailing" secondItem="Vst-bu-dlp" secondAttribute="trailing" id="cf5-wz-Lt1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ceL-zr-6lI" secondAttribute="trailing" constant="16" id="fF6-l9-Clw"/>
+                            <constraint firstItem="IZF-At-Jg5" firstAttribute="top" secondItem="Vst-bu-dlp" secondAttribute="top" id="hnb-jn-1LC"/>
+                            <constraint firstItem="IZF-At-Jg5" firstAttribute="height" secondItem="Vst-bu-dlp" secondAttribute="height" id="loL-wA-yeu"/>
+                            <constraint firstItem="Q6a-jP-PUc" firstAttribute="height" secondItem="Vst-bu-dlp" secondAttribute="height" id="of7-k4-NHP"/>
+                            <constraint firstItem="i0Z-L6-Hsz" firstAttribute="height" secondItem="IZF-At-Jg5" secondAttribute="height" id="tZ8-H5-YJS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="label1" destination="IZF-At-Jg5" id="7Vh-OL-mSL"/>
+                        <outlet property="label2" destination="i0Z-L6-Hsz" id="NwY-yI-jNn"/>
+                        <outlet property="label3" destination="KYn-5z-PT9" id="DZ6-GD-O3w"/>
+                        <outlet property="txtField1" destination="Vst-bu-dlp" id="YM9-w0-NvY"/>
+                        <outlet property="txtField2" destination="Q6a-jP-PUc" id="Mhc-RC-gY5"/>
+                        <outlet property="txtField3" destination="GCk-rI-Yjb" id="q8A-X2-cAC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
