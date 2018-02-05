@@ -13,7 +13,6 @@
 		562551F7202830CF003BE784 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 562551F6202830CF003BE784 /* Assets.xcassets */; };
 		562551FA202830CF003BE784 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 562551F8202830CF003BE784 /* LaunchScreen.storyboard */; };
 		562552042028312D003BE784 /* StepUpTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5625520320283127003BE784 /* StepUpTextField.swift */; };
-		569A26B220283C01007A0607 /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569A26B120283B13007A0607 /* CommonExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		562551F9202830CF003BE784 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		562551FB202830CF003BE784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5625520320283127003BE784 /* StepUpTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepUpTextField.swift; sourceTree = "<group>"; };
-		569A26B120283B13007A0607 /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +56,6 @@
 		562551EE202830CF003BE784 /* StepUpTextFieldDemo */ = {
 			isa = PBXGroup;
 			children = (
-				569A26B020283B07007A0607 /* Utility */,
 				56255201202830FB003BE784 /* Source */,
 				562551EF202830CF003BE784 /* AppDelegate.swift */,
 				562551F1202830CF003BE784 /* ViewController.swift */,
@@ -73,25 +70,9 @@
 		56255201202830FB003BE784 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				5625520220283127003BE784 /* StepUpTextField */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		5625520220283127003BE784 /* StepUpTextField */ = {
-			isa = PBXGroup;
-			children = (
 				5625520320283127003BE784 /* StepUpTextField.swift */,
 			);
-			path = StepUpTextField;
-			sourceTree = "<group>";
-		};
-		569A26B020283B07007A0607 /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				569A26B120283B13007A0607 /* CommonExtensions.swift */,
-			);
-			path = Utility;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +149,6 @@
 			files = (
 				562552042028312D003BE784 /* StepUpTextField.swift in Sources */,
 				562551F2202830CF003BE784 /* ViewController.swift in Sources */,
-				569A26B220283C01007A0607 /* CommonExtensions.swift in Sources */,
 				562551F0202830CF003BE784 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
