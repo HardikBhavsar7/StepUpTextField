@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   s.name         = "StepUpTextField"
   s.version      = "0.1.0"
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.summary      = "TextField that works like stepper to increment and decrement."
   s.description  = <<-DESC
                    This is the text field which can be used in application when there is a need of textfield with functionality of incement and decrement like count of items of your grocery, in which you can mention min value, max value and also the stepSize if you want to increase/ decrease more than one at a time..

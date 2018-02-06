@@ -10,20 +10,20 @@ import UIKit
 
 @objc protocol StepUpTextFieldDelegate : UITextFieldDelegate {
     
-    func stepUpTextField(textField : StepUpTextField, didIncrementValue val : String)
+    func stepUpTextField(_ textField : StepUpTextField, didIncrementValue val : String)
     
-    func stepUpTextField(textField : StepUpTextField, didDecrementValue val : String)
+    func stepUpTextField(_ textField : StepUpTextField, didDecrementValue val : String)
 }
 
 @IBDesignable
 class StepUpTextField: UITextField, UITextFieldDelegate {
     
     @IBInspectable
-    var maxValue : UInt = 5
+    var maxValue : Int = 5
     @IBInspectable
-    var minValue : UInt = 0
+    var minValue : Int = 0
     @IBInspectable
-    var maxDigits : UInt = 2
+    var maxDigits : Int = 2
     @IBInspectable
     var stepSize : Int = 2
     
@@ -96,25 +96,27 @@ class StepUpTextField: UITextField, UITextFieldDelegate {
     
     @objc func btnPlusClicked()
     {
-        if let num = Int(self.text!) as? Int
+        if Int(self.text!) != nil
         {
+            let num = Int(self.text!)!
             //Max 2 characters
             if (num + stepSize) <= maxValue
             {
                 self.text = "\(num + stepSize)"
-                self.stepUpDelegate?.stepUpTextField(textField: self, didIncrementValue: self.text!)
+                self.stepUpDelegate?.stepUpTextField(self, didIncrementValue: self.text!)
             }
         }
     }
     
     @objc func btnMinusClicked()
     {
-        if let num = Int(self.text!) as? Int
+        if Int(self.text!) != nil
         {
+            let num = Int(self.text!)!
             if (num - stepSize) >= minValue
             {
                 self.text = "\(num - stepSize)"
-                self.stepUpDelegate?.stepUpTextField(textField: self, didDecrementValue: self.text!)
+                self.stepUpDelegate?.stepUpTextField(self, didDecrementValue: self.text!)
             }
         }
     }
@@ -154,7 +156,7 @@ extension UIView {
         }
     }
     
-    func roundCorners(corners:UIRectCorner, radius: CGFloat) {
+    func roundCorners(_ corners:UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
@@ -206,13 +208,13 @@ extension String {
     
     func chunkFormatted(withChunkSize chunkSize: Int,
                         withSeparator separator: Character = " ") -> String {
-        return characters.filter { $0 != separator }.chunk(n: chunkSize)
+        return characters.filter { $0 != separator }.chunk(chunkSize)
             .map{ String($0) }.joined(separator: String(separator))
     }
 }
 
 extension Collection {
-    public func chunk(n: IndexDistance) -> [SubSequence] {
+    public func chunk(_ n: IndexDistance) -> [SubSequence] {
         var res: [SubSequence] = []
         var i = startIndex
         var j: Index

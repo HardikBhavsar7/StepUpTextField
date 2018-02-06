@@ -40,11 +40,11 @@ class ViewController: UIViewController {
 
 extension ViewController : StepUpTextFieldDelegate
 {
-    func stepUpTextField(textField: StepUpTextField, didIncrementValue val: String) {
+    func stepUpTextField(_ textField: StepUpTextField, didIncrementValue val: String) {
         print("Value has been incremented!")
     }
     
-    func stepUpTextField(textField: StepUpTextField, didDecrementValue val: String) {
+    func stepUpTextField(_ textField: StepUpTextField, didDecrementValue val: String) {
         print("Value has been decremented!")
     }
     
