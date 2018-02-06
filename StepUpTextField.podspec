@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.author       = { "Hardik Bhavsar" => "b.hardik5296@gmail.com" }
   s.ios.deployment_target = '10.0'
   s.source 	 = { :git => "https://github.com/HardikBhavsar7/StepUpTextField.git", :tag => s.version.to_s }
-  s.source_files = "StepUpTextField/StepUpTextFieldDemo/Source/StepUpTextField.swift"
+  s.source_files = "StepUpTextFieldDemo/StepUpTextFieldDemo/Source/StepUpTextField.swift"
   s.swift_version = "3.2"
 end
