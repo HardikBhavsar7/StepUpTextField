@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "StepUpTextField"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.license      = "MIT"
   s.summary      = "TextField that works like stepper to increment and decrement."
   s.description  = <<-DESC
